@@ -28,8 +28,8 @@ data:
 
 .PHONY: run
 run: ## Runs the application using docker-compose
-	docker-compose build
-	docker-compose up --remove-orphans
+	docker compose build
+	docker compose up --remove-orphans
 
 .PHONY: bin
 bin: ## Creates bin directory
