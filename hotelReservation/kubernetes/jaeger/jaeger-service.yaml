@@ -41,3 +41,16 @@ spec:
     io.kompose.service: jaeger
 status:
   loadBalancer: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: jaeger-external
+spec:
+  type: LoadBalancer
+  selector:
+    io.kompose.service: jaeger
+  ports:
+    - name: http
+      port: 8080
+      targetPort: 16686

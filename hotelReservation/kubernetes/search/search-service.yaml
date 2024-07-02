@@ -9,11 +9,12 @@ metadata:
     io.kompose.service: search
   name: search
 spec:
+  type: ClusterIP
   ports:
-    - name: "8082"
+    - name: grpc
       port: 8082
       targetPort: 8082
   selector:
-    io.kompose.service: search
+    app: search
 status:
   loadBalancer: {}

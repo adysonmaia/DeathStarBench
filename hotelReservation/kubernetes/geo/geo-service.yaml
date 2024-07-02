@@ -9,11 +9,12 @@ metadata:
     io.kompose.service: geo
   name: geo
 spec:
+  type: ClusterIP
   ports:
-    - name: "8083"
+    - name: grpc
       port: 8083
       targetPort: 8083
   selector:
-    io.kompose.service: geo
+    app: geo
 status:
   loadBalancer: {}

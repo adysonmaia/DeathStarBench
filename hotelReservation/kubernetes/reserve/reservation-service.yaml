@@ -9,11 +9,12 @@ metadata:
     io.kompose.service: reservation
   name: reservation
 spec:
+  type: ClusterIP
   ports:
-    - name: "8087"
+    - name: grpc
       port: 8087
       targetPort: 8087
   selector:
-    io.kompose.service: reservation
+    app: reservation
 status:
   loadBalancer: {}

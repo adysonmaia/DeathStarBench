@@ -24,6 +24,7 @@ spec:
       creationTimestamp: null
       labels:
         io.kompose.service: jaeger
+        app: jaeger
     spec:
       containers:
         - image: jaegertracing/all-in-one:latest

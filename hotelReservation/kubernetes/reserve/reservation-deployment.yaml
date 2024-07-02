@@ -12,7 +12,7 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      io.kompose.service: reservation
+      app: reservation
   strategy: {}
   template:
     metadata:
@@ -24,6 +24,7 @@ spec:
       creationTimestamp: null
       labels:
         io.kompose.service: reservation
+        app: reservation
     spec:
       containers:
         - command:

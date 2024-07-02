@@ -16,7 +16,7 @@ spec:
     - name: "8400"
       port: 8400
       targetPort: 8400
-    - name: "8500"
+    - name: http
       port: 8500
       targetPort: 8500
     - name: "8600"
@@ -24,6 +24,6 @@ spec:
       protocol: UDP
       targetPort: 53
   selector:
-    io.kompose.service: consul
+    app: consul
 status:
   loadBalancer: {}

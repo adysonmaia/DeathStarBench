@@ -9,11 +9,12 @@ metadata:
     io.kompose.service: mongodb-profile
   name: mongodb-profile
 spec:
+  type: ClusterIP
   ports:
-    - name: "mongodb-profile"
+    - name: mongo
       port: 27017
       targetPort: 27017
   selector:
-    io.kompose.service: mongodb-profile
+    app: mongodb-profile
 status:
   loadBalancer: {}

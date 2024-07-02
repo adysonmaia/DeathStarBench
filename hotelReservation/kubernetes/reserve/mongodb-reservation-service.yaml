@@ -9,11 +9,12 @@ metadata:
     io.kompose.service: mongodb-reservation
   name: mongodb-reservation
 spec:
+  type: ClusterIP
   ports:
-    - name: "mongodb-reservation"
+    - name: mongo
       port: 27017
       targetPort: 27017
   selector:
-    io.kompose.service: mongodb-reservation
+    app: mongodb-reservation
 status:
   loadBalancer: {}

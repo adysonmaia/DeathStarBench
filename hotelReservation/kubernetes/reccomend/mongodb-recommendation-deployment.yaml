@@ -12,7 +12,7 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      io.kompose.service: mongodb-recommendation
+      app: mongodb-recommendation
   strategy:
     type: Recreate
   template:
@@ -25,6 +25,7 @@ spec:
       creationTimestamp: null
       labels:
         io.kompose.service: mongodb-recommendation
+        app: mongodb-recommendation
     spec:
       containers:
         - image: mongo:4.4.6

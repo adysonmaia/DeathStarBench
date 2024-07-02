@@ -9,11 +9,12 @@ metadata:
     io.kompose.service: memcached-profile
   name: memcached-profile
 spec:
+  type: ClusterIP
   ports:
-    - name: "memcached-profile"
+    - name: memcached
       port: 11211
       targetPort: 11211
   selector:
-    io.kompose.service: memcached-profile
+    app: memcached-profile
 status:
   loadBalancer: {}

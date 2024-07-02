@@ -9,11 +9,12 @@ metadata:
     io.kompose.service: rate
   name: rate
 spec:
+  type: ClusterIP
   ports:
-    - name: "8084"
+    - name: grpc
       port: 8084
       targetPort: 8084
   selector:
-    io.kompose.service: rate
+    app: rate
 status:
   loadBalancer: {}

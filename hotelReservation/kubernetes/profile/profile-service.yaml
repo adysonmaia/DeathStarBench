@@ -9,11 +9,12 @@ metadata:
     io.kompose.service: profile
   name: profile
 spec:
+  type: ClusterIP
   ports:
-    - name: "8081"
+    - name: grpc
       port: 8081
       targetPort: 8081
   selector:
-    io.kompose.service: profile
+    app: profile
 status:
   loadBalancer: {}
